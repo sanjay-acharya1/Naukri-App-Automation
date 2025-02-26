@@ -101,5 +101,4 @@ public class ProfilePage extends BaseClass {
 		return isSelected;
 	}
 	
-	
 }

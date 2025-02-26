@@ -8,9 +8,6 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 // z Z
 public class Base {
@@ -27,16 +24,12 @@ public class Base {
 		if(executionEnv.equalsIgnoreCase("local")) {
 			switch(browser.toLowerCase()) {
 			case "chrome":
-				WebDriverManager.chromedriver().setup();
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\Git-clone-repo\\NaukriAppAutomation\\driver\\chromedriver.exe");
 				driver = new ChromeDriver();
 				break;
 			case "edge":
-				WebDriverManager.edgedriver().setup();
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\Git-clone-repo\\NaukriAppAutomation\\driver\\msedgedriver.exe");
 				driver = new EdgeDriver();
-				break;
-			case "firefox":
-				WebDriverManager.firefoxdriver().setup();
-				driver = new FirefoxDriver();
 				break;
 			default: 
 				System.out.println("Browser name is incorrect.!!!");
@@ -45,7 +38,7 @@ public class Base {
 		}
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 		
 		return driver;
 		
@@ -61,5 +54,5 @@ public class Base {
 		prop.load(file);
 		return prop;
 	}
-
+	
 }

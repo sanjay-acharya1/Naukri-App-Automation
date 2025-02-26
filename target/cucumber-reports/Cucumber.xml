@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="10.911" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-02-19T08:04:24.618538700Z">
-<testcase classname="Naukri Home Page Functionalities" name="Update Resume" time="10.728">
-<failure type="java.lang.AssertionError">
-<![CDATA[java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepDefinitions.ProfileStepDef.resume_should_be_uploaded_successfully(ProfileStepDef.java:95)
-	at ✽.Resume should be uploaded successfully(file:///C:/Users/User/Git-clone-repo/NaukriAppAutomation/src/test/resources/features/profile.feature:21)
-]]>
-</failure>
+<testsuite name="Cucumber" time="29.148" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-26T15:26:09.050494700Z">
+<testcase classname="Naukri Home Page Functionalities" name="Edit Career Profile" time="16.62">
+<system-out><![CDATA[
+Given I navigate to Naukri Application......................................passed
+And Enter the credentials...................................................passed
+When I navigate to my profile...............................................passed
+And Click on career profile.................................................passed
+And I click on "preferred location", select/deselect a "location"...........passed
+And Click on save button....................................................passed
+Then I should see profile updated as "Today"................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Naukri Home Page Functionalities" name="Update Resume" time="12.359">
 <system-out><![CDATA[
 Given I navigate to Naukri Application......................................passed
 And Enter the credentials...................................................passed
 When I navigate to my profile...............................................passed
 And Click on update in resume...............................................passed
 And I click on resume that has to be uploaded...............................passed
-Then Resume should be uploaded successfully.................................failed
-And I should see profile updated as "Today".................................skipped
+Then Resume should be uploaded successfully.................................passed
+And I should see profile updated as "Today".................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
