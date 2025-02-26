@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="29.148" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-26T15:26:09.050494700Z">
-<testcase classname="Naukri Home Page Functionalities" name="Edit Career Profile" time="16.62">
+<testsuite name="Cucumber" time="28.56" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-26T16:06:28.822679700Z">
+<testcase classname="Naukri Home Page Functionalities" name="Edit Career Profile" time="15.607">
 <system-out><![CDATA[
 Given I navigate to Naukri Application......................................passed
 And Enter the credentials...................................................passed
@@ -11,7 +11,7 @@ And Click on save button....................................................pass
 Then I should see profile updated as "Today"................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Naukri Home Page Functionalities" name="Update Resume" time="12.359">
+<testcase classname="Naukri Home Page Functionalities" name="Update Resume" time="12.735">
 <system-out><![CDATA[
 Given I navigate to Naukri Application......................................passed
 And Enter the credentials...................................................passed
